@@ -1,3 +1,4 @@
+# TEST
 name: CI
 
 on:
@@ -43,7 +44,7 @@ jobs:
       - name: install
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: npm ci
-  
+
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -66,7 +67,7 @@ jobs:
         run: npm run lint
 
     needs: setup
-  
+
   compile:
     runs-on: ubuntu-latest
     steps:
@@ -89,7 +90,7 @@ jobs:
         run: npm run compile
 
     needs: setup
-  
+
   coverage:
     runs-on: ubuntu-latest
     steps:
